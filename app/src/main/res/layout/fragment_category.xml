@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CategoryFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/business"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:textSize="26dp"
+        android:text="Business" />
+
+    <TextView
+        android:id="@+id/entertain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/business"
+        android:layout_margin="10dp"
+        android:textSize="26dp"
+
+        android:text="Entertainment" />
+
+    <TextView
+        android:id="@+id/general"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/entertain"
+        android:layout_margin="10dp"
+        android:textSize="26dp"
+
+        android:text="General" />
+
+    <TextView
+        android:id="@+id/health"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/general"
+        android:layout_margin="10dp"
+        android:textSize="26dp"
+
+        android:text="Health" />
+
+    <TextView
+        android:id="@+id/science"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/health"
+        android:layout_margin="10dp"
+        android:textSize="26dp"
+
+        android:text="Science" />
+
+    <TextView
+        android:id="@+id/sports"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/science"
+        android:layout_margin="10dp"
+        android:textSize="26dp"
+
+        android:text="Sports" />
+
+    <TextView
+        android:id="@+id/technology"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sports"
+        android:layout_margin="10dp"
+        android:textSize="26dp"
+
+        android:text="Technology" />
+
+</RelativeLayout>

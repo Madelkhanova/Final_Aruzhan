@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/countryFragment">
+
+    <fragment
+        android:id="@+id/countryFragment"
+        android:name="com.example.finalaru.CountriesFragment"
+        android:label="CountryFragment">
+
+        <action
+            android:id="@+id/action_country_to_category"
+            app:destination="@id/categoryFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_out_right"
+            app:popExitAnim="@android:anim/slide_in_left">
+            <argument
+                android:name="country"
+                android:defaultValue="us"
+                app:argType="string" />
+        </action>
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/categoryFragment"
+        android:name="com.example.finalaru.CategoryFragment"
+        android:label="CategoryFragment">
+
+        <action
+            android:id="@+id/action_category_to_news"
+            app:destination="@id/newsFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_out_right"
+            app:popExitAnim="@android:anim/slide_in_left">
+
+            <argument
+                android:name="country"
+                android:defaultValue="us"
+                app:argType="string" />
+            <argument
+                android:name="category"
+                android:defaultValue="business"
+                app:argType="string" />
+
+        </action>
+        <argument
+            android:name="country"
+            android:defaultValue="us"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/newsFragment"
+        android:name="com.example.finalaru.PostListFragment"
+        android:label="NewsFragment">
+        <action
+            android:id="@+id/action_news_to_detail"
+            app:destination="@id/detailFragment">
+            <argument
+                android:name="idNews"
+                android:defaultValue="-1"
+                app:argType="integer" />
+        </action>
+
+        <argument
+            android:name="country"
+            android:defaultValue="us"
+            app:argType="string" />
+        <argument
+            android:name="category"
+            android:defaultValue="business"
+            app:argType="string" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.finalaru.DetailFragment"
+        android:label="DetailFragment">
+        <argument
+            android:name="idNews"
+            android:defaultValue="-1"
+            app:argType="integer" />
+    </fragment>
+</navigation>
